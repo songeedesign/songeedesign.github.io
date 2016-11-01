@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> 웅 진 식 품 </title>
+<link rel="shortcut icon" href="images/ico/Favicon-wjfood.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/my-style.css">
+<link rel="stylesheet" href="css/jquery.sidr.dark.css">
+<link rel="stylesheet" href="css/custom.css">
+<!--<link rel="stylesheet" href="css/vegas.css">>
+
+<!--[if lte IE 8]>
+<script src="http://songeedesign.dothome.co.kr/home/js/html5.js"></script>
+<![endif]-->
+<script>
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.waterwheelCarousel.min.js"></script>
+<script src="js/vegas.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="js/common.js"></script>
+<script src="js/wrest.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/jquery.sidr.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/jquery.arbitrary-anchor.js"></script>
+<script src="js/jquery.hoverdir.js"></script>
+
+
+</head>
+<body>
+<div class="a_warp">
+	<div class="header">
+		<a id="m_menu_btn" href="#sidr" class="menu_btn">메뉴</a>
+		<div class="center_align clearfix">
+			<h1><img src="images/logo/header_logo.jpg" alt="로고"></h1>
+			<div class="gnb_warp">
+				<ul class="gnb clearfix">
+					<li><a href="/home/about.php">기업소개</a>
+						<ul class="submenu sub0">
+							<li><a href="/home/about.php">웅진식품 소개</a></li>
+							<li><a href="/home/ceo.php">CEO 인사말</a></li>
+							<li><a href="/home/history.php">주요연혁</a></li>
+<!--							<li><a href="/home/bbs/board.php?bo_table=news">보도자료</a></li>-->
+							<li><a class="bd_r lastc" href="/home/location.php">오시는길</a></li>
+						</ul>
+					</li>
+					
+					<li><a class="bar" href="/home/pen.php">제품소개</a>
+						<ul class="submenu sub1">
+							<li><a href="#">제품소개</a></li>
+							<li><a href="#">주스</a></li>
+							<li><a href="#">차/커피</a></li>
+							<li><a href="#">곡물/두유</a></li>
+<!--							<li><a href="#">어린이</a></li>-->
+<!--							<li><a class="bd_r lastc" href="/home/art.php">홍삼/건강기능식품</a></li>-->
+						</ul>
+					</li>
+					
+                    <li><a class="bar" href="/home/event.php">고객지원</a>
+						<ul class="submenu sub2">
+							<li><a href="#">이벤트</a></li>
+<!--							<li><a href="/home/bbs/board.php?bo_table=notice">공지사항</a></li>-->
+							<li><a href="#">자주묻는질문</a></li>
+							<li><a href="#">고객의소리</a></li>
+							<li><a href="#">인재채용</a></li>
+				        </ul>
+					</li>
+					
+					<li><a class="bar" href="http://eshop.wjfood.co.kr/">e-shop</a>							
+				    </li>
+				</ul>
+			</div>
+			<div class="search">
+				<fieldset id="hd_sch">
+						<legend>사이트 내 전체검색</legend>
+						<form name="fsearchbox" method="get" action="http://songeedesign.dothome.co.kr/home/bbs/search.php" onsubmit="return fsearchbox_submit(this);" class="all_search_wrap">
+						<input type="hidden" name="sfl" value="wr_subject||wr_content">
+						<input type="hidden" name="sop" value="and">
+						<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+						<input type="text" name="stx" id="sch_stx" class="all_search" maxlength="20" placeholder="SEARCH">
+						<input type="submit" id="sch_submit" class="all_search_btn" value="검색">
+						</form>
+
+						<script>
+						function fsearchbox_submit(f)
+						{
+							if (f.stx.value.length < 2) {
+								alert("검색어는 두글자 이상 입력하십시오.");
+								f.stx.select();
+								f.stx.focus();
+								return false;
+							}
+
+							// 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+							var cnt = 0;
+							for (var i=0; i<f.stx.value.length; i++) {
+								if (f.stx.value.charAt(i) == ' ')
+									cnt++;
+							}
+
+							if (cnt > 1) {
+								alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+								f.stx.select();
+								f.stx.focus();
+								return false;
+							}
+
+							return true;
+						}
+						</script>
+				</fieldset>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 모바일 메뉴 -->
+	
+	<div id="sidr">
+	<ul class="m_gnb">
+		<li class="m_home"><a href="/home">HOME<div class="bullet home"></div></a>
+		</li>
+		<li><a href="#">기업소개<div class="bullet"></div></a>
+			<ul>
+				<li><a href="/home/about.php">웅진식품 소개</a></li>
+				<li><a href="/home/ceo.php">CEO 인사말</a></li>
+				<li><a href="/home/history.php">주요연혁</a></li>
+<!--				<li><a href="/home/bbs/board.php?bo_table=news">보도자료</a></li>-->
+				<li><a class="bd_r" href="/home/location.php">오시는길</a></li>
+			</ul>
+		</li>
+		<li><a href="#">제품소개<div class="bullet"></div></a>
+			<ul>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">주스</a></li>
+				<li><a href="#">차/커피</a></li>
+				<li><a href="#">곡물/두유</a></li>
+<!--				<li><a href="#">어린이</a></li>-->
+<!--				<li><a class="bd_r lastc" href="/home/art.php">홍삼/건강기능식품</a></li>-->
+			</ul>
+		</li>
+		<li><a href="#">고객지원<div class="bullet"></div></a>
+			<ul>
+				<li><a href="/home/event.php">이벤트</a></li>
+<!--				<li><a href="/home/bbs/board.php?bo_table=notice">공지사항</a></li>-->
+				<li><a href="/home/qna.php">자주묻는질문</a></li>
+				<li><a class="bd_r" href="/home/pr.php">인재채용</a></li>
+			</ul>
+		</li>
+		<li class="bd_r"><a href="http://eshop.wjfood.co.kr/">e-shop<div class="bullet"></div></a>
+		</li>
+	</ul>
+	</div>
+
+   <!-- 우측 고정 네비게이션 -->
+   
+    <nav class="fixed-nav">
+        <ul class="">
+            <li class="l0"><a href="#.header">TOP</a></li>
+            <li class="l1"><a href="##ceo">CEO 인사말</a></li>
+            <li class="l2"><a href="##history">주요연혁</a></li>
+            <li class="l3"><a href="##map">오시는길</a></li>
+        </ul>
+    </nav>
+   
+   
+    <!-- 본문 -->
+    
+    <div class="sub_bg body_wrap">
+        <div class="sub_body center_align"> 
+            <div class="sub_bg">
+                <div class="sub_body center_align">
+                    <div class="sub_wrap">
+                        <div class="section page1" id="sub_main">
+                            <div class="sub_main"><p class="sub_main-container clearfix">
+                                <div class="sub_main-brand">
+                                    <h2>웅진식품 소개</h2>
+		                            <p>‘맛있는 제품과 새로운 경험으로 행복한 식문화를 선도하는’ 종합식품회사 웅진식품입니다</p></div>
+                                    
+                                <div class="sub_brand_img">
+                                <div id="sub_brand_img1"><img src="images/main_bg/fruit_img1.png" alt=""></div>
+                                <div id="sub_brand_img2"><img src="images/main_bg/fruit_img2.png" alt=""></div> 
+                                </div> 
+
+                                <div class="sub_brand_txtwrap">
+                                <h1>Food Frontier 4U</h1>
+                                <h2>Vision 2018</h2>
+                                    <br><h4>웅진식품은 외국 브랜드가 국내 음료시장을 장악했던 1976년 설립, 한국의 문화와 정서를 담은 음료 브랜드를 선보이며 성장해 왔습니다.
+
+                                    건강하고, 믿을 수 있는 음료 제품을 선보이며 고객의 사랑을 받아 온 웅진식품은 Vision 2018 선포와 함께 ‘맛있는 제품과 새로운 경험으로 행복한 식문화를 선도하는’ 종합식품회사로 도약해 나갈 것입니다. </h4> 
+                                </div>
+
+                                    <div class="sub_brand-box">
+                                        <div class="brand-box_wrap container center-align">
+                                            <h2>웅진식품의 비젼</h2>
+                                            <ul id="sub_brand_box" class="clearfix">
+                                                <li class="brand n1">
+                                                    <a href="#">
+                                                        <img src="images/sub/sub_box_img1.jpg" alt="">
+                                                        <div><img src="images/sub/sub_box_h1.jpg" alt=""></div>
+                                                    </a>
+                                                </li>
+                                                <li class="brand n2">
+                                                    <a href="#">
+                                                        <img src="images/sub/sub_box_img2.jpg" alt="">
+                                                        <div><img src="images/sub/sub_box_h2.jpg" alt=""></div>
+                                                    </a>
+                                                </li>
+                                                <li class="brand n3">
+                                                    <a href="#">
+                                                        <img src="images/sub/sub_box_img3.jpg" alt="">
+                                                        <div><img src="images/sub/sub_box_h3.jpg" alt=""></div>
+                                                    </a>
+                                                </li>
+                                                <li class="brand n4">
+                                                    <a href="#">
+                                                        <img src="images/sub/sub_box_img4.jpg" alt="">
+                                                        <div><img src="images/sub/sub_box_h4.jpg" alt=""></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>    
+                                    </div>
+
+                                <div class="btn_scroll" style="display:block;">
+                                    <a href="#brand">
+                                        <img src="images/scroll_down.png" alt="스크롤">
+                                    </a>
+                                </div>
+                        </p></div>
+                        </div>
+                        <div class="section page2" id="ceo">
+                            <div class="number2">
+                                <div class="ceo_profile"></div>
+                                <div class="ceo_message">
+                                    &quot;고객에게 행복하고 건강한 먹거리를 제공하는
+                                    <div class="ceo_m">
+                                    웅진식품이 되겠습니다.&quot;
+                                    </div>
+                                </div>
+                                <div class="ceo_text">
+                                <p>안녕하십니까?<br/>
+                                   웅진식품 CEO 김종우 입니다.먼저 웅진식품 홈페이지에 방문해 주셔서 감사합니다.</p>
+                                <p></p>
+                                <p>웅진식품은 고객에게 건강한 원료를 사용한 독창적인 우리 음료를 만들자는 사명감으로 ‘아침햇살’, ‘초록매실’, ‘하늘보리’, ‘자연은’ 등 건강한 맛과 문화를 담은 독창적인 브랜드를 선보이며 성장해 왔습니다. </p>
+                                <p></p>
+                                <p>또한, 웅진식품은 고객 여러분과의 보다 밀접한 커뮤니케이션을 위해 최근, 기업 홈페이지에 더해 WOW Innovation, 공식 카페와 블로그, 페이스북 계정 등을 함께 운영하며, 고객 여러분의 목소리에 귀 기울이고 있습니다. </p>
+                                <p></p>
+                                <p>항상 고객을 최우선으로 생각하며, 더 좋은 제품 더 건강한 제품을 통해고객 여러분께 행복을 드리는 웅진식품이 되겠습니다.
+                                웅진식품의 홈페이지에 머무시는 동안 즐거운 시간 되시길 바랍니다. 
+                                </p>
+                                <p></p>
+                                <p>웅진식품 대표이사 김종우</p>
+                                <p><img src="images/ceo/ceo_sign.png" alt=""></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section page3" id="history">
+                            <div class="number3">
+                                <div class="content_wrap">
+                                    <div class="history_controls clearfix">
+                                                <div id="history_slider_prev" class="control"></div>
+                                                <div id="history_slider_next" class="control"></div>
+                                    </div>
+                                    <ul class="history_slider">
+                                        <li>
+                                            <span class="history_year">1980 - 2000</span>
+                                            <span class="history_title">
+                                                <img class ="history_img" src="images/history_1.png" alt="">
+                                                기업 창업과 도약기<br/>웅진식품의 성장기
+                                            </span>
+                                            <ul class="history_text">
+                                                <li class="list_fst"><span>1976</span><span class="history_list">회사 설립</br>(회화구규 생산 시작)</span></li>
+                                                <li><span>1987</span><span class="history_list">웅진그룹 인수</br>(대표이사 회장 윤석금 취임)</span></li>
+                                                <li><span>1988</span><span class="history_list">웅진인삼(주)로 상호 변경</span></li>
+                                                <li><span>1996</span><span class="history_list">웅진식품(주)로 상호변경</br>유구 공장 준공</span></li>
+                                                <li><span>2000</span><span class="history_list">ISO9001 인증 획득(한국생산성본부 인증원)<br/><초록매실>국내 최단기 판매 1억 병 돌파</span></li>
+
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="history_year">2001 - 2010</span>
+                                            <span class="history_title">
+                                                <img class ="history_img" src="images/history_2.png" alt="">
+                                                글로벌 기업으로의 도약<br/>사업진출 다각화</span>
+                                            <ul class="history_text">
+                                                <li class="list_fst"><span>2001</span><span class="history_list"><아침햇살>+<초록매실> 판매 10억 병 돌파</br><아침햇살> 제조기술 국내 특허 획득</br><아침햇살> 제조기술 미국 특허 획득</span></li>
+                                                <li><span>2003</span><span class="history_list">글로벌브랜드 햇살(hetsal) BI 선포</span></li>
+                                                <li><span>2007</span><span class="history_list">건강식품사업 진출</span></li>
+                                                <li><span>2008</span><span class="history_list">웅진식품, 풀무원 샘물과 전략적 제휴</br>한천을 이용한 다이어트 식품 조성물 관련 특허 획득
+                                                당화 인삼 및 인삼 추출물의 제조 방법 관련 특허 획득</br><발효홍삼 기> 미국 수출</br>대한간호협회 업무 제휴 협약 체결</br>웅진식품, 용기 경량화 기술 혁신으로 연간 10억 원 절감</br><장쾌삼> 두산베어스 마케팅 제휴 및 선수단 제품 지원</span></li>
+                                                <li><span>2009</span><span class="history_list">(주)할리스F&amp;B와 전략적 업무 제휴, 커피 음료 시장 진출</br>웅진식품 충무로 극동빌딩으로 사옥 이전</br>장쾌삼 발효홍삼 임상실험 결과 발표</br>웅진식품 중국 수출액 1000만 달러 돌파</span></li>
+                                                <li><span>2010</span><span class="history_list">웅진식품 2015년 비전 선포</br>바바커피 에스프레소 머신 렌탈 서비스 시작</span></li>
+
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="history_year">2011 - 2016</span>
+                                            <span class="history_title">
+                                                <img class ="history_img" src="images/history_3.png" alt="">
+                                                식품기업 선두자<br/>새로운 50년의 시작</span>
+                                            <ul class="history_text">
+                                                <li class="list_fst"><span>2011</span><span class="history_list">다채움 1호점 오픈 - 신개념 건강식품 프랜차이즈 서비스 출범</br>다채움 2호점 오픈</span></li>
+                                                <li><span>2012</span><span class="history_list">웅진식품 유구 생산본부 제 2공장 준공 및 가동 시작</br>웅진식품 유구 생산본부 제 2공장 GMP(우수건강기능식품제조기준) 지정 완료</span></li>
+                                                <li><span>2013</span><span class="history_list">웅진식품 유구 생산본부 ‘볶은커피’ 해썹 지정 완료</br>웅진식품 유구 생산본부 ‘액상커피(레토르트)’ 해썹 지정 완료</br><신규한 홍삼 발효용 미생물, 이를 이용한 홍삼 발효액 및 홍삼 발효 음료> 특허 등록</br>‘한앤컴퍼니’ 웅진식품 인수</span></li>
+                                                <li><span>2014</span><span class="history_list">웅진식품 공식 블로그 ‘진이의 행복먹는 블로그’ 오픈</br>웅진식품 공식 카페 ‘웅진이네 행복카페’ 오픈</br>웅진식품 유구 제 1공장 해썹(HACCP) 지정 완료</br>웅진식품 창립 37주년, ‘비전 2018’ 선언</br>웅진식품 유구 제 2공장 ‘유기농 에티오피아 아라비카 커피 유기인증’ 획득</br>아이디어 제안사이트 WOW(http://wow.wjfood.co.kr)오픈</br>웅진식품, 커피전문점 카페베네와 MOU 체결</br>대영식품, 웅진식품 계열사로 편입</br>웅진식품, 가야 F&amp;B 합병</span></li>
+                                                <li><span>2015</span><span class="history_list">2015 두바이 식품박람회 참가</br>가야F&amp;B, 웅진식품 계열사로 편입</br>스위토리(sweetory) 브랜드 론칭, 제과시장 진출</br>김종우 대표이사 취임</br>웅진식품, 산업자원부 주최 ‘500만불 수출의 탑’ 수상</br>웅진식품, 가야 F&amp;B 합병</span></li>
+                                                <li><span>2016</span><span class="history_list">웅진식품 공식 인스타그램 오픈</br>웅진식품, 중국 시안 실크로드 박람회 참가</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="section page4" id="map">
+                            <div class="number4">
+                            	<div class="wrap">
+                                    <h1 class="title">웅진식품 서울본사</h1>
+                                    <div id="map"></div>
+                                </div>
+                            </div> 
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 하단 -->                   
+                   
+<div class="footer">
+    <div class="btn_scroll_top">
+        <p class="scroll_top"><a href="#"><img src="images/scroll_top.png" alt="scroll_top"></a></p>     
+    </div>
+
+    <div class="footer_wrap">
+        <div class="footer_logo"><a href="#"><img src="images/logo/08%20Signature(K)_Grayscale-01.png" alt=""></a></div>
+        <div class="footer_menu">
+            <li><a href="#">기업소개<div class="bullet"></div></a>
+                <ul>
+                    <li><a href="/home/about.php">웅진식품 소개</a></li>
+                    <li><a href="/home/ceo.php">CEO 인사말</a></li>
+                    <li><a href="/home/history.php">주요연혁</a></li>
+<!--                                    <li><a href="/home/bbs/board.php?bo_table=news">보도자료</a></li>-->
+                    <li><a class="bd_r" href="/home/location.php">오시는길</a></li>
+                </ul>
+            </li>
+            <li><a href="#">제품소개<div class="bullet"></div></a>
+                <ul>
+                    <li><a href="#">제품소개</a></li>
+                    <li><a href="#">주스</a></li>
+                    <li><a href="#">차/커피</a></li>
+                    <li><a href="#">곡물/두유</a></li>
+<!--                                    <li><a href="#">어린이</a></li>-->
+<!--                                    <li><a class="bd_r lastc" href="/home/art.php">홍삼/건강기능식품</a></li>-->
+                </ul>
+            </li>
+            <li><a href="#">고객지원<div class="bullet"></div></a>
+                <ul>
+                    <li><a href="/home/event.php">이벤트</a></li>
+<!--                                    <li><a href="/home/bbs/board.php?bo_table=notice">공지사항</a></li>-->
+                    <li><a href="/home/qna.php">자주묻는질문</a></li>
+                    <li><a class="bd_r" href="/home/pr.php">인재채용</a></li>
+                </ul>
+            </li>
+            <li class="bd_r"><a href="http://eshop.wjfood.co.kr/">e-shop<div class="bullet"></div></a>
+            </li> 
+        </div>
+
+
+        <div class="copyright">
+            <span>COPYRIGHT&copy; 2016 WOONGJIN FOODS CO., LTD ALL RIGHTS RESERVED</span><br>
+            대표번호 : 02-3668-9114 | 고객센터 : 080-766-6543
+        </div>
+        <div class="sns">
+            <a href="https://www.facebook.com/wjfood" target="_blank"><img src="images/facebook.png" alt="페이스북"></a>
+        </div>
+    </div>    
+</div>
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+var $sv_use = $(".sv_use");
+var count = $sv_use.length;
+
+$sv_use.each(function() {
+    $(this).css("z-index", count);
+    $(this).css("position", "relative");
+    count = count - 1;
+});
+});
+</script>
+<![endif]-->
+
+<!--
+</div>   
+<script>
+$(function(){
+    $('.main').vegas({
+        slides:[
+            {src:'images/main_bg/a.jpg'},
+            {src:'images/main_bg/b.jpg'},
+            {src:'images/main_bg/c.jpg'},
+            {src:'images/main_bg/d.jpg'}
+        ],
+        transition:[ 'fade' ]
+    });
+})
+</script>
+-->   
+
+<script>
+$(function(){
+
+    $c=$('#drink').waterwheelCarousel({
+        separation:250,
+        opacityMultiplier:0.6,
+        flankingItems:2,
+        sizeMultiplier:0.6,
+        speed:250,
+        autoPlay:2300,
+        movedToCenter:function(){
+            idx=$('#drink img').index($('#drink img.carousel-center'))
+            $('.drtxt').eq(idx).show().siblings().hide();
+        }
+    })
+
+    $('.prev').on('click', function (e) {
+        e.preventDefault();
+        $c.prev();
+    });
+    $('.next').on('click', function (e) {
+        e.preventDefault();
+        $c.next();
+    });
+})
+</script>
+
+<script src="js/init.js"></script>
+
+<script>
+$(function(){
+    $(window).on('load',function(){
+        $b2=$('.brand').offset();
+        $b3=$('.movie').offset();
+    })
+    /*
+    $(window).on('scroll',function(){
+        if($(this).scrollTop()>$b2.top && $(this).scrollTop()<$b3.top){
+            $('.fixed-nav li.10').removeClass('#9ACD32').addClass('#ED1C24');
+        }else if($(this).scrollTop()>$b3.top){
+            $('.fixed-nav li.10').removeClass('#ED1C24').addClass('#9ACD32');
+        }
+        else{
+            $('.fixed-nav li.10').removeClass('#ED1C24').removeClass('#9ACD32');
+        }
+    })
+*/
+    $('#sub_brand_box>li').hoverdir()
+})
+</script>
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function woongjinfood(){
+		var star=new google.maps.Map(document.getElementById('map'),{
+			center:{lat:37.574156 , lng:127.020800 } ,
+			zoom:17
+		})
+		new google.maps.Marker({
+			position:{lat:37.574156 , lng:127.020800},
+			map:star,
+			title:'hello world',
+//			icon:'logo/header_logo.jpg'
+		});
+	}
+	woongjinfood();
+	</script>
+
+</body>
+</html>

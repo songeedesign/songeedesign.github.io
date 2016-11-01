@@ -1,10 +1,401 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title> 웅 진 식 품 </title>
+<link rel="shortcut icon" href="images/ico/Favicon-wjfood.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/my-style.css">
+<link rel="stylesheet" href="css/jquery.sidr.dark.css">
+<link rel="stylesheet" href="css/custom.css">
+<!--<link rel="stylesheet" href="css/vegas.css">>
+
+<!--[if lte IE 8]>
+<script src="http://songeedesign.dothome.co.kr/home/js/html5.js"></script>
+<![endif]-->
+<script>
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.waterwheelCarousel.min.js"></script>
+<script src="js/vegas.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="js/common.js"></script>
+<script src="js/wrest.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/jquery.sidr.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/jquery.arbitrary-anchor.js"></script>
+
+
 </head>
 <body>
-	<h1>채송이의 홈페이지</h1>
+<div class="a_warp">
+	<div class="header">
+		<a id="m_menu_btn" href="#sidr" class="menu_btn">메뉴</a>
+		<div class="center_align clearfix">
+			<h1><img src="images/logo/header_logo.jpg" alt="로고"></h1>
+			<div class="gnb_warp">
+				<ul class="gnb clearfix">
+					<li><a href="ceo.html">기업소개</a>
+						<ul class="submenu sub0">
+							<li><a href="ceo.html">웅진식품 소개</a></li>
+							<li><a href="ceo.html">CEO 인사말</a></li>
+							<li><a href="ceo.html">주요연혁</a></li>
+<!--							<li><a href="/home/bbs/board.php?bo_table=news">보도자료</a></li>-->
+							<li><a class="bd_r lastc" href="ceo.html">오시는길</a></li>
+						</ul>
+					</li>
+					
+					<li><a class="bar" href="/home/pen.php">제품소개</a>
+						<ul class="submenu sub1">
+							<li><a href="#">제품소개</a></li>
+							<li><a href="#">주스</a></li>
+							<li><a href="#">차/커피</a></li>
+							<li><a href="#">곡물/두유</a></li>
+<!--							<li><a href="#">어린이</a></li>-->
+<!--							<li><a class="bd_r lastc" href="/home/art.php">홍삼/건강기능식품</a></li>-->
+						</ul>
+					</li>
+					
+                    <li><a class="bar" href="/home/event.php">고객지원</a>
+						<ul class="submenu sub2">
+							<li><a href="#">이벤트</a></li>
+<!--							<li><a href="/home/bbs/board.php?bo_table=notice">공지사항</a></li>-->
+							<li><a href="#">자주묻는질문</a></li>
+							<li><a href="#">고객의소리</a></li>
+							<li><a href="#">인재채용</a></li>
+				        </ul>
+					</li>
+					
+					<li><a class="bar" href="http://eshop.wjfood.co.kr/">e-shop</a>							
+				    </li>
+				</ul>
+			</div>
+			<div class="search">
+				<fieldset id="hd_sch">
+						<legend>사이트 내 전체검색</legend>
+						<form name="fsearchbox" method="get" action="http://songeedesign.dothome.co.kr/home/bbs/search.php" onsubmit="return fsearchbox_submit(this);" class="all_search_wrap">
+						<input type="hidden" name="sfl" value="wr_subject||wr_content">
+						<input type="hidden" name="sop" value="and">
+						<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+						<input type="text" name="stx" id="sch_stx" class="all_search" maxlength="20" placeholder="SEARCH">
+						<input type="submit" id="sch_submit" class="all_search_btn" value="검색">
+						</form>
+
+						<script>
+						function fsearchbox_submit(f)
+						{
+							if (f.stx.value.length < 2) {
+								alert("검색어는 두글자 이상 입력하십시오.");
+								f.stx.select();
+								f.stx.focus();
+								return false;
+							}
+
+							// 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
+							var cnt = 0;
+							for (var i=0; i<f.stx.value.length; i++) {
+								if (f.stx.value.charAt(i) == ' ')
+									cnt++;
+							}
+
+							if (cnt > 1) {
+								alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+								f.stx.select();
+								f.stx.focus();
+								return false;
+							}
+
+							return true;
+						}
+						</script>
+				</fieldset>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 모바일 메뉴 -->
+	
+	<div id="sidr">
+	<ul class="m_gnb">
+		<li class="m_home"><a href="/home">HOME<div class="bullet home"></div></a>
+		</li>
+		<li><a href="ceo.html">기업소개<div class="bullet"></div></a>
+			<ul>
+				<li><a href="ceo.html">웅진식품 소개</a></li>
+				<li><a href="ceo.html">CEO 인사말</a></li>
+				<li><a href="ceo.html">주요연혁</a></li>
+<!--				<li><a href="/home/bbs/board.php?bo_table=news">보도자료</a></li>-->
+				<li><a class="bd_r" href="ceo.html">오시는길</a></li>
+			</ul>
+		</li>
+		<li><a href="#">제품소개<div class="bullet"></div></a>
+			<ul>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">주스</a></li>
+				<li><a href="#">차/커피</a></li>
+				<li><a href="#">곡물/두유</a></li>
+<!--				<li><a href="#">어린이</a></li>-->
+<!--				<li><a class="bd_r lastc" href="/home/art.php">홍삼/건강기능식품</a></li>-->
+			</ul>
+		</li>
+		<li><a href="#">고객지원<div class="bullet"></div></a>
+			<ul>
+				<li><a href="/home/event.php">이벤트</a></li>
+<!--				<li><a href="/home/bbs/board.php?bo_table=notice">공지사항</a></li>-->
+				<li><a href="/home/qna.php">자주묻는질문</a></li>
+				<li><a class="bd_r" href="/home/pr.php">인재채용</a></li>
+			</ul>
+		</li>
+		<li class="bd_r"><a href="http://eshop.wjfood.co.kr/">e-shop<div class="bullet"></div></a>
+		</li>
+	</ul>
+	</div>
+
+    <nav class="fixed-nav">
+        <ul class="">
+            <li class="l0"><a href="#.header">TOP</a></li>
+            <li class="l1"><a href="#.brand">웅진식품 소개</a></li>
+            <li class="l2"><a href="#.movie">신제품 CF</a></li>
+            <li class="l3"><a href="#.value">비젼</a></li>
+        </ul>
+    </nav>
+   
+   
+    <div class="bg">
+        <div class="body center_align">
+            <div class="wrap">
+                <div class="main-container clearfix" id="main">
+                    <div class="main"><p class="main-container clearfix">
+                        <div class="main-drink">
+                           <div class="drink-txt">
+                                <div class="drtxt on"><h1>100% 국산 곡물</h1><h2>마음까지 쿨 하늘보리</h2></div>
+                                <div class="drtxt"><h1>더 시원하고, 더 청량한</h1><h2>하늘보리 아이스 스파클링</h2></div>
+                                <div class="drtxt"><h1>100% 우리 땅, 우리 곡물</h1><h2>부드럽게 내 속을 채우는 아침햇살</h2></div>
+                                <div class="drtxt"><h1>100% 국산 검은콩 두유</h1><h2>대단한콩 착한콩 검은콩</h2></div>
+                                <div class="drtxt"><h1>생생하게 씹히는 알로에의 상큼함</h1><h2>자연은 790일 알로에</h2></div>
+                                <div class="drtxt"><h1>상큼한 오렌지에 칼슘까지</h1><h2>자연은 고칼슘 오렌지 100</h2></div>
+                                <div class="drtxt"><h1>신선하고 달콤한 사과의 맛과 향을 깔끔하게 담은</h1><h2>자연은 170일 사과 100</h2></div>
+                                <div class="drtxt"><h1>달콤상큼한 제주감귤의 풍부한 맛을 담은</h1><h2>자연은 210일 제주감귤</h2></div>
+                                <div class="drtxt"><h1>잘 익은 토마토의 싱그럽고 진한 맛 그대로</h1><h2>자연은 90일 토마토</h2></div>
+                                <div class="drtxt"><h1>유기농 과일과 야채로 만든 어린이 전용 포도 주스</h1><h2>자연은 잘자란 유기농 포도</h2></div>
+                                <div class="drtxt"><h1>유기농 과일과 야채로 만든 어린이 전용 오렌지 주스</h1><h2>자연은 잘자란 유기농 오렌지</h2></div>
+                                <div class="drtxt"><h1>물 한 방울 넣지 않고 그대로 짠</h1><h2>자연은 착즙 100 오렌지</h2></div>
+                                <div class="drtxt"><h1>물 한 방울 넣지 않고 그대로 짠</h1><h2>자연은 착즙 100 포도</h2></div>
+                                <div class="drtxt"><h1>대한민국 대표 매실음료</h1><h2>초록매실</h2></div>
+                                <div class="drtxt"><h1>지중해 농장의 당도 높은 포도를 그대로 짠</h1><h2>자연은 지중해 햇살 포도</h2></div>
+                                <div class="drtxt"><h1>홍삼 외에 다른 첨가물은 전혀 넣지 않은 100% 홍삼 농축액</h1><h2>장쾌삼 홍삼정 골드</h2></div>
+                                <div class="drtxt"><h1> 상큼한 오렌지에 칼슘까지</h1><h2>자연은 고칼슘 오렌지 100</h2></div>
+                                <div class="drtxt"><h1>상큼한 포도에 칼슘까지</h1><h2>자연은 140일 포도</h2></div>
+                            </div>
+                            <div id="drink">
+                                <img src="images/good/good1.png" alt="">
+                                <img src="images/good/good2.png" alt="">
+                                <img src="images/good/good3.png" alt="">
+                                <img src="images/good/good4.png" alt="">
+                                <img src="images/good/good5.png" alt="">
+                                <img src="images/good/good6.png" alt="">
+                                <img src="images/good/good7.png" alt="">
+                                <img src="images/good/good8.png" alt="">
+                                <img src="images/good/good9.png" alt="">
+                                <img src="images/good/good10.png" alt="">
+                                <img src="images/good/good11.png" alt="">
+                                <img src="images/good/good12.png" alt="">
+                                <img src="images/good/good13.png" alt="">
+                                <img src="images/good/good14.png" alt="">
+                                <img src="images/good/good15.png" alt="">
+                                <img src="images/good/good16.png" alt="">
+                                <img src="images/good/good17.png" alt="">
+                                <img src="images/good/good18.png" alt="">
+                            </div>
+                        </div>
+                        <div class="btn_scroll" style="display:block;">
+                            <a href="#brand">
+                                <img src="images/scroll_down.png" alt="스크롤">
+                            </a>
+                        </div>
+                    </p></div>
+                </div>
+                <div class="brand" id="brand">
+                    <div class="number2">
+                        <div class="brand_img">
+                            <div id="brand_img1"><img src="images/main_bg/fruit_img1.png" alt=""></div>
+                            <div id="brand_img2"><img src="images/main_bg/fruit_img2.png" alt=""></div> 
+                        </div>
+                        <div class="brand_txtwrap">
+                           <h1>Food Frontier 4U</h1>
+                            <h2>Vision 2018</h2>
+
+                                <br><h4>웅진식품은 외국 브랜드가 국내 음료시장을 장악했던 1976년 설립, 한국의 문화와 정서를 담은 음료 브랜드를 선보이며 성장해 왔습니다.
+
+                                건강하고, 믿을 수 있는 음료 제품을 선보이며 고객의 사랑을 받아 온 웅진식품은 Vision 2018 선포와 함께 ‘맛있는 제품과 새로운 경험으로 행복한 식문화를 선도하는’ 종합식품회사로 도약해 나갈 것입니다. </h4>
+
+                        </div>
+                        <div class="brand_learn_more">
+                            <a href="/home/about.php">
+                                <img src="images/btn_learnMore.png" alt="learn more">
+                            </a>
+                        </div>
+                     </div>    
+                </div>
+
+                <div class="movie" id="movie">
+                    <div class="number3">
+                        <div id="videoWrap">
+                        <video autoplay loop poster="images/hqdefault.jpg" id="videoBg">
+                            <source src="images/hqdefault.mp4" type="video/mp4"></source>
+                        </video>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value" id="value">
+                    <div class="number4"><img src="images/good/goodslist.png" alt=""></div>
+                </div>
+                   
+                <div class="footer">
+                    <div class="btn_scroll_top">
+                        <p class="scroll_top"><a href="#"><img src="images/scroll_top.png" alt="scroll_top"></a></p>     
+                    </div>
+                    
+                    <div class="footer_wrap">
+                        <div class="footer_logo"><a href="#"><img src="images/logo/08%20Signature(K)_Grayscale-01.png" alt=""></a></div>
+                        <div class="footer_menu">
+                            <li><a href="ceo.html">기업소개<div class="bullet"></div></a>
+                                <ul>
+                                    <li><a href="ceo.html">웅진식품 소개</a></li>
+                                    <li><a href="ceo.html">CEO 인사말</a></li>
+                                    <li><a href="ceo.html">주요연혁</a></li>
+<!--                                    <li><a href="/home/bbs/board.php?bo_table=news">보도자료</a></li>-->
+                                    <li><a class="bd_r" href="ceo.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">제품소개<div class="bullet"></div></a>
+                                <ul>
+                                    <li><a href="#">제품소개</a></li>
+                                    <li><a href="#">주스</a></li>
+                                    <li><a href="#">차/커피</a></li>
+                                    <li><a href="#">곡물/두유</a></li>
+<!--                                    <li><a href="#">어린이</a></li>-->
+<!--                                    <li><a class="bd_r lastc" href="/home/art.php">홍삼/건강기능식품</a></li>-->
+                                </ul>
+                            </li>
+                            <li><a href="#">고객지원<div class="bullet"></div></a>
+                                <ul>
+                                    <li><a href="/home/event.php">이벤트</a></li>
+<!--                                    <li><a href="/home/bbs/board.php?bo_table=notice">공지사항</a></li>-->
+                                    <li><a href="/home/qna.php">자주묻는질문</a></li>
+                                    <li><a class="bd_r" href="/home/pr.php">인재채용</a></li>
+                                </ul>
+                            </li>
+                            <li class="bd_r"><a href="http://eshop.wjfood.co.kr/">e-shop<div class="bullet"></div></a>
+                            </li> 
+                        </div>
+                    
+                    
+                        <div class="copyright">
+                            <span>COPYRIGHT&copy; 2016 WOONGJIN FOODS CO., LTD ALL RIGHTS RESERVED</span><br>
+                            대표번호 : 02-3668-9114 | 고객센터 : 080-766-6543
+                        </div>
+                        <div class="sns">
+                            <a href="https://www.facebook.com/wjfood" target="_blank"><img src="images/facebook.png" alt="페이스북"></a>
+                        </div>
+                    </div>    
+                </div>
+       
+            </div>
+        </div> 
+    </div> 
+</div>
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+<!--
+   </div>   
+    <script>
+    $(function(){
+        $('.main').vegas({
+            slides:[
+                {src:'images/main_bg/a.jpg'},
+                {src:'images/main_bg/b.jpg'},
+                {src:'images/main_bg/c.jpg'},
+                {src:'images/main_bg/d.jpg'}
+            ],
+            transition:[ 'fade' ]
+        });
+    })
+    </script>
+ -->   
+    
+    <script>
+    $(function(){
+  
+        $c=$('#drink').waterwheelCarousel({
+            separation:250,
+            opacityMultiplier:0.6,
+			flankingItems:2,
+            sizeMultiplier:0.6,
+            speed:250,
+            autoPlay:2300,
+            movedToCenter:function(){
+                idx=$('#drink img').index($('#drink img.carousel-center'))
+                $('.drtxt').eq(idx).show().siblings().hide();
+            }
+        })
+        
+        $('.prev').on('click', function (e) {
+            e.preventDefault();
+            $c.prev();
+        });
+        $('.next').on('click', function (e) {
+            e.preventDefault();
+            $c.next();
+        });
+    })
+    </script>
+    
+    <script src="js/init.js"></script>
+    
+    <script>
+    $(function(){
+        $(window).on('load',function(){
+            $b2=$('.brand').offset();
+            $b3=$('.movie').offset();
+        })
+        $(window).on('scroll',function(){
+            if($(this).scrollTop()>$b2.top && $(this).scrollTop()<$b3.top){
+                $('.fixed-nav li.10').removeClass('#9ACD32').addClass('#ED1C24');
+            }else if($(this).scrollTop()>$b3.top){
+                $('.fixed-nav li.10').removeClass('#ED1C24').addClass('#9ACD32');
+            }
+            else{
+                $('.fixed-nav li.10').removeClass('#ED1C24').removeClass('#9ACD32');
+            }
+        })
+
+    })    
+    </script>
 </body>
 </html>
